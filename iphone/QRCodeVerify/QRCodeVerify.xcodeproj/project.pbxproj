@@ -1,0 +1,316 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F13D780C160868300093627B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13D780B160868300093627B /* UIKit.framework */; };
+		F13D780E160868300093627B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13D780D160868300093627B /* Foundation.framework */; };
+		F13D7810160868300093627B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13D780F160868300093627B /* CoreGraphics.framework */; };
+		F13D7816160868300093627B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F13D7814160868300093627B /* InfoPlist.strings */; };
+		F13D7818160868300093627B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F13D7817160868300093627B /* main.m */; };
+		F13D781C160868300093627B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F13D781B160868300093627B /* AppDelegate.m */; };
+		F13D781F160868300093627B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F13D781E160868300093627B /* ViewController.m */; };
+		F13D7822160868300093627B /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F13D7820160868300093627B /* ViewController_iPhone.xib */; };
+		F13D7825160868300093627B /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F13D7823160868300093627B /* ViewController_iPad.xib */; };
+		F13D782C1608687F0093627B /* zxing in Resources */ = {isa = PBXBuildFile; fileRef = F13D782B1608687F0093627B /* zxing */; };
+		F13D782E1608689E0093627B /* libZXingWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F13D782D1608689E0093627B /* libZXingWidget.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F13D7807160868300093627B /* QRCodeVerify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRCodeVerify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F13D780B160868300093627B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F13D780D160868300093627B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F13D780F160868300093627B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F13D7813160868300093627B /* QRCodeVerify-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QRCodeVerify-Info.plist"; sourceTree = "<group>"; };
+		F13D7815160868300093627B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F13D7817160868300093627B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F13D7819160868300093627B /* QRCodeVerify-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QRCodeVerify-Prefix.pch"; sourceTree = "<group>"; };
+		F13D781A160868300093627B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F13D781B160868300093627B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F13D781D160868300093627B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F13D781E160868300093627B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F13D7821160868300093627B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		F13D7824160868300093627B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		F13D782B1608687F0093627B /* zxing */ = {isa = PBXFileReference; lastKnownFileType = folder; path = zxing; sourceTree = "<group>"; };
+		F13D782D1608689E0093627B /* libZXingWidget.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libZXingWidget.a; path = zxing/libs/libZXingWidget.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F13D7804160868300093627B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F13D782E1608689E0093627B /* libZXingWidget.a in Frameworks */,
+				F13D780C160868300093627B /* UIKit.framework in Frameworks */,
+				F13D780E160868300093627B /* Foundation.framework in Frameworks */,
+				F13D7810160868300093627B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F13D77FC160868300093627B = {
+			isa = PBXGroup;
+			children = (
+				F13D782B1608687F0093627B /* zxing */,
+				F13D7811160868300093627B /* QRCodeVerify */,
+				F13D780A160868300093627B /* Frameworks */,
+				F13D7808160868300093627B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F13D7808160868300093627B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F13D7807160868300093627B /* QRCodeVerify.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F13D780A160868300093627B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F13D782D1608689E0093627B /* libZXingWidget.a */,
+				F13D780B160868300093627B /* UIKit.framework */,
+				F13D780D160868300093627B /* Foundation.framework */,
+				F13D780F160868300093627B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F13D7811160868300093627B /* QRCodeVerify */ = {
+			isa = PBXGroup;
+			children = (
+				F13D781A160868300093627B /* AppDelegate.h */,
+				F13D781B160868300093627B /* AppDelegate.m */,
+				F13D781D160868300093627B /* ViewController.h */,
+				F13D781E160868300093627B /* ViewController.m */,
+				F13D7820160868300093627B /* ViewController_iPhone.xib */,
+				F13D7823160868300093627B /* ViewController_iPad.xib */,
+				F13D7812160868300093627B /* Supporting Files */,
+			);
+			path = QRCodeVerify;
+			sourceTree = "<group>";
+		};
+		F13D7812160868300093627B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F13D7813160868300093627B /* QRCodeVerify-Info.plist */,
+				F13D7814160868300093627B /* InfoPlist.strings */,
+				F13D7817160868300093627B /* main.m */,
+				F13D7819160868300093627B /* QRCodeVerify-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F13D7806160868300093627B /* QRCodeVerify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F13D7828160868300093627B /* Build configuration list for PBXNativeTarget "QRCodeVerify" */;
+			buildPhases = (
+				F13D7803160868300093627B /* Sources */,
+				F13D7804160868300093627B /* Frameworks */,
+				F13D7805160868300093627B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QRCodeVerify;
+			productName = QRCodeVerify;
+			productReference = F13D7807160868300093627B /* QRCodeVerify.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F13D77FE160868300093627B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Ding Orlando";
+			};
+			buildConfigurationList = F13D7801160868300093627B /* Build configuration list for PBXProject "QRCodeVerify" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F13D77FC160868300093627B;
+			productRefGroup = F13D7808160868300093627B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F13D7806160868300093627B /* QRCodeVerify */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F13D7805160868300093627B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F13D7816160868300093627B /* InfoPlist.strings in Resources */,
+				F13D7822160868300093627B /* ViewController_iPhone.xib in Resources */,
+				F13D7825160868300093627B /* ViewController_iPad.xib in Resources */,
+				F13D782C1608687F0093627B /* zxing in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F13D7803160868300093627B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F13D7818160868300093627B /* main.m in Sources */,
+				F13D781C160868300093627B /* AppDelegate.m in Sources */,
+				F13D781F160868300093627B /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F13D7814160868300093627B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F13D7815160868300093627B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F13D7820160868300093627B /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F13D7821160868300093627B /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		F13D7823160868300093627B /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F13D7824160868300093627B /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F13D7826160868300093627B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F13D7827160868300093627B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F13D7829160868300093627B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QRCodeVerify/QRCodeVerify-Prefix.pch";
+				INFOPLIST_FILE = "QRCodeVerify/QRCodeVerify-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/zxing/libs\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F13D782A160868300093627B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QRCodeVerify/QRCodeVerify-Prefix.pch";
+				INFOPLIST_FILE = "QRCodeVerify/QRCodeVerify-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/zxing/libs\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F13D7801160868300093627B /* Build configuration list for PBXProject "QRCodeVerify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F13D7826160868300093627B /* Debug */,
+				F13D7827160868300093627B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F13D7828160868300093627B /* Build configuration list for PBXNativeTarget "QRCodeVerify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F13D7829160868300093627B /* Debug */,
+				F13D782A160868300093627B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F13D77FE160868300093627B /* Project object */;
+}
