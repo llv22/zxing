@@ -1,0 +1,5 @@
+static zxing iOS library Notes -- by Orlando,Ding 2012-09
+
+1, Reason - in order to simplify zxing integration, for just .a and relevant header integration, without multi-source code project integration
+
+2, How-to
