@@ -91,6 +91,7 @@ zxing::qrcode::DecodedBitStreamParser::append(std::string&, unsigned char const*
 zxing::qrcode::DecodedBitStreamParser::append(std::string&, unsigned char const*, unsigned long, char const*) in libZXingWidget.a(DecodedBitStreamParser-64E27B33E79CBC52.o)
 ld: symbol(s) not found for architecture i386
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
+ ==> external libraries linkable
 */
 - (void)zxingController:(ZXingWidgetController*)controller didScanResult:(NSString *)result {
     self.resultsToDisplay = result;

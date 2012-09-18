@@ -1,7 +1,7 @@
 Orlando to build universal zxing libraries for iOS
 
 # to export path - export OUT_DIR=/Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/ 
-# to input path - import PRO_FE-/Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/zxing/iphone/ZXingWidget/ZXingWidget.xcodeproj
+# to input path - import PRO_FE=/Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/zxing/iphone/ZXingWidget/ZXingWidget.xcodeproj
 # 
 
 # ios - arm building
