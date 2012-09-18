@@ -19,6 +19,7 @@
  */
 
 #import <Foundation/Foundation.h>
+//TODO : copy zxing/common from CoreSrc/zxing - /Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/zxing/cpp/core/src
 #import <zxing/common/Counted.h>
 #import <zxing/Result.h>
 #import <zxing/BinaryBitmap.h>
