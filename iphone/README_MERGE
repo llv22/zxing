@@ -1,0 +1,30 @@
+Orlando to build universal zxing libraries for iOS
+
+# to export path - export OUT_DIR=/Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/ 
+# to input path - import PRO_FE-/Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/zxing/iphone/ZXingWidget/ZXingWidget.xcodeproj
+# 
+
+# ios - arm building
+# output to /Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/arm.root/Release-iphoneos/libZXingWidget.a
+xcodebuild -project /Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/zxing/iphone/ZXingWidget/ZXingWidget.xcodeproj -sdk iphoneos5.1 -target ZXingWidget OBJROOT=/Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/arm.obj SYMROOT=/Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/arm.root -configuration Release
+# ios - i386 building [default arch to i386]
+# output to /Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/i386.root/Release-iphonesimulator/libZXingWidget.a
+xcodebuild -project /Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/zxing/iphone/ZXingWidget/ZXingWidget.xcodeproj -sdk iphonesimulator5.0 -target ZXingWidget OBJROOT=/Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/i386.obj SYMROOT=/Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/i386.root -configuration Release -arch i386
+#merge for universal file
+mkdir /Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/merged
+lipo -create /Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/arm.root/Release-iphoneos/libZXingWidget.a /Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/i386.root/Release-iphonesimulator/libZXingWidget.a -output /Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/merged/libZXingWidget.a
+
+# source header copying - /Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/zxing/cpp/core/src
+# header file copying - /Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/zxing/iphone/ZXingWidget/Classes
+mkdir /Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/zxing/iphone/ScanTestLibA/Classes/zxing
+# root header in classes folder
+cp /Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/zxing/iphone/ZXingWidget/Classes/*.h /Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/zxing/iphone/ScanTestLibA/Classes/zxing
+# actions subfolder
+mkdir /Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/zxing/iphone/ScanTestLibA/Classes/zxing/actions
+cp -rf /Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/zxing/iphone/ZXingWidget/Classes/actions/*.h /Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/zxing/iphone/ScanTestLibA/Classes/zxing/actions
+# parsedResults subfolder
+mkdir /Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/zxing/iphone/ScanTestLibA/Classes/zxing/parsedResults
+cp /Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/zxing/iphone/ZXingWidget/Classes/parsedResults/*.h /Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/zxing/iphone/ScanTestLibA/Classes/zxing/parsedResults
+# resultParsers subfolder
+mkdir /Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/zxing/iphone/ScanTestLibA/Classes/zxing/resultParsers
+cp /Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/zxing/iphone/ZXingWidget/Classes/resultParsers/*.h /Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/zxing/iphone/ScanTestLibA/Classes/zxing/resultParsers
