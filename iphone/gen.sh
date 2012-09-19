@@ -18,9 +18,9 @@ function cpheader(){
 }
 
 iParamCount="$#"
-if [ $iParamCount -ne 1 ]
+if [ $iParamCount -ne 1 ] && [ $iParamCount -ne 2 ]
 then
- echo "Static gen usage [executed in iphone folder]: \n\targ1 - static library output directory"
+ echo "Static gen usage [executed in iphone folder]: \n\targ1 - static library output directory \n\t[arg2 - input source folder]"
  exit 1
 fi
 outDir="$1"
@@ -29,8 +29,20 @@ then
  echo "static libary output directory doesn't exist!"
  exit 1
 fi
+if [ $iParamCount -eq 2 ]
+then
+  if [ ! -d $2 ]
+    then
+        echo "additional input source folder doesn't exist!"
+     exit 1
+  fi
+fi
 inDir=`pwd`
 inDir=`dirname $inDir`
+if [ $iParamCount -eq 2 ]
+then
+  inDir="$2"
+fi
 strProject=$inDir"/iphone/ZXingWidget/ZXingWidget.xcodeproj"
 if [ ! -d $strProject ]
 then
