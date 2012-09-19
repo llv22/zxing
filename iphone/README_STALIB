@@ -1,0 +1,27 @@
+static zxing iOS library Notes -- by Orlando,Ding 2012-09
+
+1, Reason - in order to simplify zxing integration, for just .a and relevant header integration, without multi-source code project integration
+
+2, How-to
+git clone or download zip to your local
+* switch to iphone branch
+* ./gen.sh <OUT_DIR> - generate .a universal file[i386,arm compatiable] and header file to OUT_DIR
+
+<OUT_DIR>/merged will be your target file
+Dings-MacBook-Pro:merged llv22$ ls
+libZXingWidget.a	zxingheader
+Dings-MacBook-Pro:merged llv22$ ls -all
+total 53536
+drwxr-xr-x   4 llv22  staff       136 Sep 19 11:25 .
+drwxr-xr-x  13 llv22  staff       442 Sep 19 11:25 ..
+-rw-r--r--   1 llv22  staff  27408820 Sep 19 11:25 libZXingWidget.a
+drwxr-xr-x  20 llv22  staff       680 Sep 19 11:25 zxingheader
+
+* import libZXingWidget.a and zxingheader[recursive header files] into your project
+
+3, sample code - you can refer to QRCodeVerify project
+TAKE CARE - .mm is required for zxing cpp compilation
+
+4, futher investigation
+* the zxing ZXingWidget UI isn't so nice, you can customized the UIViewController;
+* Navigation for scanning isn't so smooth, just change as you like.
