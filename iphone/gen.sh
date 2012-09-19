@@ -1,24 +1,36 @@
 #!/bin/sh
 # see bash parameters process
 # 1, http://www.ibm.com/developerworks/library/l-bash-parameters/index.html
+# $1 - root input folder [our folder in iphone - /Users/llv22/Documents/i058959_dev/08_techdev/01_zxingportable/zxing]
+# $2 - target copy root folder
+function cpheader(){
+ for file in `find $1 -name *.h`
+  do
+     # processing file copying logic - 1, get subfolder path; 2, cp all file from current input folder to target
+#     rootlen=`expr length $1`
+     rootlen=${#1}
+     subfile=${file:$rootlen}
+     tfullfile=$2$subfile
+#http://stackoverflow.com/questions/1529946/linux-copy-and-create-destination-dir-if-it-does-not-exist
+     subfolder=`dirname $tfullfile`
+     mkdir -p $subfolder && cp -rf $file $subfolder
+  done
+}
+
 iParamCount="$#"
-if [ $iParamCount -ne 2 ]
+if [ $iParamCount -ne 1 ]
 then
- echo "Static gen usage: \n\targ0 - zxing iphone project folder;\n\targ1 - static library output directory"
+ echo "Static gen usage [executed in iphone folder]: \n\targ1 - static library output directory"
  exit 1
 fi
-outDir="$2"
+outDir="$1"
 if [ ! -d $outDir ]
 then
  echo "static libary output directory doesn't exist!"
  exit 1
 fi
-inDir="$1"
-if [ ! -d $inDir ]
-then
- echo "zxing iphone input project folder doesn't exist, ZXingWidget.xcodeproj should in this folder"
- exit 1
-fi
+inDir=`pwd`
+inDir=`dirname $inDir`
 strProject=$inDir"/iphone/ZXingWidget/ZXingWidget.xcodeproj"
 if [ ! -d $strProject ]
 then
@@ -71,67 +83,10 @@ then
  rm -rf $srcMerged
 fi
 mkdir $srcMerged
+# http://stackoverflow.com/questions/3290616/bash-find-chained-to-a-grep-which-then-prints - find without explict control
 rootHeader=$inDir"/iphone/ZXingWidget/Classes"
-#shopt -s globstar
-header=$rootHeader"/*.h"
-cp -rf $header $srcMerged 
-# actions subfolder
-mkdir $srcMerged"/actions"
-header=$rootHeader"/actions/*.h"
-cp -rf $header $srcMerged"/actions"
-# parsedResults subfolder 
-mkdir $srcMerged"/parsedResults"
-header=$rootHeader"/parsedResults/*.h"
-cp -rf $header $srcMerged"/parsedResults"
-# resultParsers subfolder
-mkdir $srcMerged"/resultParsers"
-header=$rootHeader"/resultParsers/*.h"
-cp -rf $header $srcMerged"/resultParsers"
-# cp zxing from .h to target folder
+cpheader $rootHeader $srcMerged
 mkdir $srcMerged"/zxing"
-header=$inDir"/cpp/core/src/zxing/*.h"
-#echo $header
-cp -rf $header $srcMerged"/zxing"
-mkdir $srcMerged"/zxing/common"
-header=$inDir"/cpp/core/src/zxing/common/*.h"
-cp -rf $header $srcMerged"/zxing/common"
-mkdir $srcMerged"/zxing/common/detector"
-header=$inDir"/cpp/core/src/zxing/common/detector/*.h"
-cp -rf $header $srcMerged"/zxing/common/detector"
-mkdir $srcMerged"/zxing/common/reedsolomon"
-header=$inDir"/cpp/core/src/zxing/common/reedsolomon/*.h"
-cp -rf $header $srcMerged"/zxing/common/reedsolomon"
-mkdir $srcMerged"/zxing/datamatrix"
-header=$inDir"/cpp/core/src/zxing/datamatrix/*.h"
-cp -rf $header $srcMerged"/zxing/datamatrix"
-mkdir $srcMerged"/zxing/datamatrix/decoder"
-header=$inDir"/cpp/core/src/zxing/datamatrix/decoder/*.h"
-cp -rf $header $srcMerged"/zxing/datamatrix/decoder"
-mkdir $srcMerged"/zxing/datamatrix/detector"
-header=$inDir"/cpp/core/src/zxing/datamatrix/detector/*.h"
-cp -rf $header $srcMerged"/zxing/datamatrix/detector"
-#multi
-mkdir $srcMerged"/zxing/multi"
-header=$inDir"/cpp/core/src/zxing/multi/*.h"
-cp -rf $header $srcMerged"/zxing/multi"
-mkdir $srcMerged"/zxing/multi/qrcode"
-header=$inDir"/cpp/core/src/zxing/multi/qrcode/*.h"
-cp -rf $header $srcMerged"/zxing/multi/qrcode"
-mkdir $srcMerged"/zxing/multi/qrcode/detector"
-header=$inDir"/cpp/core/src/zxing/multi/qrcode/detector/*.h"
-cp -rf $header $srcMerged"/zxing/multi/qrcode/detector"
-#oned
-mkdir $srcMerged"/zxing/oned"
-header=$inDir"/cpp/core/src/zxing/oned/*.h"
-cp -rf $header $srcMerged"/zxing/oned"
-#qrcode
-mkdir $srcMerged"/zxing/qrcode"
-header=$inDir"/cpp/core/src/zxing/qrcode/*.h"
-cp -rf $header $srcMerged"/zxing/qrcode"
-mkdir $srcMerged"/zxing/qrcode/decoder"
-header=$inDir"/cpp/core/src/zxing/qrcode/decoder/*.h"
-cp -rf $header $srcMerged"/zxing/qrcode/decoder"
-mkdir $srcMerged"/zxing/qrcode/detector"
-header=$inDir"/cpp/core/src/zxing/qrcode/detector/*.h"
-cp -rf $header $srcMerged"/zxing/qrcode/detector"
-
+srcMerged=$srcMerged"/zxing"
+rootcoreHeader=$inDir"/cpp/core/src/zxing"
+cpheader $rootcoreHeader $srcMerged
