@@ -25,6 +25,7 @@
 		F13D785116087A790093627B /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13D785016087A790093627B /* CoreVideo.framework */; };
 		F13D785316087A800093627B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13D785216087A800093627B /* CoreMedia.framework */; };
 		F13D785516087AA10093627B /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F13D785416087AA10093627B /* libiconv.dylib */; };
+		F17B17D3160B35E600A45AA6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F17B17D2160B35E600A45AA6 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		F13D785016087A790093627B /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		F13D785216087A800093627B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		F13D785416087AA10093627B /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		F17B17D2160B35E600A45AA6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		F13D77FC160868300093627B = {
 			isa = PBXGroup;
 			children = (
+				F17B17D2160B35E600A45AA6 /* Default-568h@2x.png */,
 				F13D782B1608687F0093627B /* zxing */,
 				F13D7811160868300093627B /* QRCodeVerify */,
 				F13D780A160868300093627B /* Frameworks */,
@@ -199,6 +202,7 @@
 				F13D782C1608687F0093627B /* zxing in Resources */,
 				F13D783A16086FD20093627B /* MainWindow.xib in Resources */,
 				F13D784A16087A360093627B /* beep-beep.aiff in Resources */,
+				F17B17D3160B35E600A45AA6 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
